@@ -23,13 +23,19 @@ function InputTarea(props) {
       completada: false,
     };
 
+    const inputDOM = document.getElementById('task-input');
+    inputDOM.value = '';
+    setInput('');
     props.onSubmit(tareaNueva);
+
+
   }
   return (
     <form
       className='form-input-tarea'
       onSubmit={manejarEnvio}>
       <input
+        id='task-input'
         className='input-tarea'
         type='text'
         placeholder='Ingresa una tarea'
